@@ -47,7 +47,7 @@ main {
 .main-container {
     width: calc(100vw - 40%);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .main-banner {
@@ -59,6 +59,7 @@ main {
     border-radius: 12px;
     display: flex;
     align-items: flex-end;
+    margin-bottom: 20px;
 }
 
 .banner-text {
@@ -69,11 +70,50 @@ main {
     font-style: italic;
 }
 
-.banner-text p {
+.banner-text h2 {
     padding: 5px;
     background-color: blue;
     width: fit-content;
     border-radius: 6px;
+}
+
+.banner-text p {
+    line-height: 1.2;
+    font-size: 2rem;
+}
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid #E8E8EA;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    padding: 20px;
+}
+
+.card-img img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.card-content {
+    margin: 20px;
+}
+
+.card-content p {
+    line-height: 1.5;
+}
+
+.card-content a {
+    color: blue;
+    text-decoration: none;
 }
 
 @media (max-width: 655px) {
@@ -89,9 +129,20 @@ main {
         width: 90%;
         font-size: small;
     }
+
+    .card-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 655px) and (max-width: 1130px) {
+    .card-section {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 1130px) {
+
     .header-container,
     .main-container {
         width: calc(100vw - 30%);
