@@ -1,216 +1,15 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.header-container {
-    width: calc(100vw - 40%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.header-logo {
-    width: 80px;
-}
-
-.header-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.header-links ul li {
-    margin-left: 30px;
-}
-
-.header-links ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.burger-menu {
-    font-size: 25px;
-    display: none;
-}
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.main-container {
-    width: calc(100vw - 40%);
-    display: flex;
-    flex-direction: column;
-}
-
-.main-banner {
-    width: 100%;
-    height: 450px;
-    background-image: url('/assets/images/1.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 20px;
-}
-
-.banner-text {
-    width: 70%;
-    color: #FFFFFF;
-    padding-top: 300px;
-    padding-left: 20px;
-    font-style: italic;
-}
-
-.banner-text h2 {
-    padding: 5px;
-    background-color: blue;
-    width: fit-content;
-    border-radius: 6px;
-}
-
-.banner-text p {
-    line-height: 1.2;
-    font-size: 2rem;
-}
-
-.card-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.card {
-    border: 2px solid #E8E8EA;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-img {
-    padding: 20px;
-}
-
-.card-img img {
-    border-radius: 12px;
-    width: 100%;
-}
-
-.card-content {
-    margin: 20px;
-}
-
-.card-content p {
-    line-height: 1.5;
-}
-
-.card-content a {
-    color: blue;
-    text-decoration: none;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    background-color: #E8E8EA;
-    margin-top: 20px;
-    padding: 20px 0;
-}
-
-.footer-container {
-    width: calc(100vw - 40%);
-    display: grid;
-    grid-template-rows: auto auto;
-    row-gap: 20px;
-}
-
-.quick-action {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.terms-and-policy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-    text-align: center;
-}
-
-.footer-logo {
-    width: 120px;
-    margin-bottom: 10px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer-links ul li {
-    margin: 0 15px;
-}
-
-.quick-link ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-container ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.subscribe {
-    display: flex;
-    flex-direction: column;
-}
-
-.subscribe p {
-    margin-top: -5px;
-}
-
-.subscribe input[type="email"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.subscribe button {
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.subscribe button:hover {
-    background-color: darkblue;
-}
+@import url('/assets/css/design-system.css');
+@import url('/assets/css/components/header.css');
+@import url('/assets/css/components/main.css');
+@import url('/assets/css/components/card.css');
+@import url('/assets/css/components/footer.css');
 
 @media (max-width: 655px) {
 
     .header-container,
     .main-container,
     .footer-container {
-        width: calc(100vw - 10%);
+        width: var(--full-width-mobile);
     }
 
     .header-links ul {
@@ -223,7 +22,7 @@ footer {
 
     .banner-text {
         width: 90%;
-        font-size: small;
+        font-size: var(--font-size-small);
     }
 
     .card-section,
@@ -245,7 +44,7 @@ footer {
     .header-container,
     .main-container,
     .footer-container {
-        width: calc(100vw - 20%);
+        width: var(--full-width-tablet);
     }
 
     .card-section,
@@ -259,6 +58,6 @@ footer {
     .header-container,
     .main-container,
     .footer-container {
-        width: calc(100vw - 30%);
+        width: var(--full-width-small-desktop);
     }
 }

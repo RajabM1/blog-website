@@ -1,0 +1,35 @@
+@import url('../design-system.css');
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+}
+
+.card {
+    border: 2px solid var(--color-light);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    padding: var(--spacing-medium);
+}
+
+.card-img img {
+    border-radius: var(--card-border-radius);
+    width: 100%;
+}
+
+.card-content {
+    margin: var(--spacing-medium);
+}
+
+.card-content p {
+    line-height: 1.5;
+}
+
+.card-content a {
+    color: var(--color-primary);
+    text-decoration: none;
+}

@@ -1,0 +1,81 @@
+@import url('../design-system.css');
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-light);
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-medium) 0;
+}
+
+.footer-container {
+    width: var(--full-width);
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: var(--spacing-medium);
+}
+
+.quick-action {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+}
+
+.terms-and-policy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--spacing-medium);
+    border-top: 1px solid var(--color-secondary);
+    text-align: center;
+}
+
+.footer-logo {
+    width: var(--logo-size);
+    margin-bottom: var(--spacing-small);
+}
+
+.footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe p {
+    margin-top: -5px;
+}
+
+.subscribe input[type="email"] {
+    padding: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--btn-border-radius);
+}
+
+.subscribe button {
+    padding: var(--spacing-small);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--btn-border-radius);
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: var(--color-primary-dark);
+}
