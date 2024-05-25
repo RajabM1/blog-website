@@ -68,6 +68,10 @@ main {
     margin-bottom: var(--spacing-medium);
 }
 
+.post figcaption{
+    text-align: center;
+}
+
 blockquote {
     width: fit-content;
     background-color: var(--color-light);
