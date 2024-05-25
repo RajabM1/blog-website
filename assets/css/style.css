@@ -116,7 +116,103 @@ main {
     text-decoration: none;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #E8E8EA;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.footer-container {
+    width: calc(100vw - 40%);
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 20px;
+}
+
+.quick-action {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.terms-and-policy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.quick-link ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe p {
+    margin-top: -5px;
+}
+
+.subscribe input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.subscribe button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: darkblue;
+}
+
 @media (max-width: 655px) {
+
+    .header-container,
+    .main-container,
+    .footer-container {
+        width: calc(100vw - 10%);
+    }
+
     .header-links ul {
         display: none;
     }
@@ -130,13 +226,30 @@ main {
         font-size: small;
     }
 
-    .card-section {
+    .card-section,
+    .quick-action {
         grid-template-columns: 1fr;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+    }
+
+    .footer-links ul li {
+        margin: 5px 0;
     }
 }
 
 @media (min-width: 655px) and (max-width: 1130px) {
-    .card-section {
+
+    .header-container,
+    .main-container,
+    .footer-container {
+        width: calc(100vw - 20%);
+    }
+
+    .card-section,
+    .quick-action {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -144,7 +257,8 @@ main {
 @media (max-width: 1130px) {
 
     .header-container,
-    .main-container {
+    .main-container,
+    .footer-container {
         width: calc(100vw - 30%);
     }
 }
