@@ -14,10 +14,40 @@
 
     .header-links ul {
         display: none;
+        position: absolute;
+        right: 75px;
+        top: 55px;
+        z-index: 10;
+        background-color: var(--color-light);
+        min-width: 200px;
+    }
+
+    .header-links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent var(--color-light) transparent;
+        position: absolute;
+        right: 5px;
+        top: -19px;
+    }
+
+    .header-links ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--color-secondary);
+    }
+
+    .header-links ul li {
+        margin: 0;
+        padding: var(--spacing-small);
     }
 
     .burger-menu {
-        display: inline;
+        display: block;
+    }
+
+    .burger-menu:hover+ul,
+    .header-links ul:hover {
+        display: block;
     }
 
     .banner-text {
